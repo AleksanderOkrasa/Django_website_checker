@@ -1,0 +1,30 @@
+
+{% include "website/search.html"%}
+  <head>
+    <title>Results of search</title>
+  </head>
+<body>
+    <p>hello {{user}}</p>
+    <p>You search a ' {{web.name_webpage}} '
+
+    {% if web.status == 'available'%}
+
+        </p>
+        <p>this webpage is available under url: <i>{{web.url}}</i></p>
+        <p>
+            On this website is:<br>
+            {{web.buttons}} buttons<br>
+            {{web.links}} links
+        </p>
+
+    {% elif web.status == 'notAvailable' %}
+
+        but unfortunately this webpage is not available :(</p>
+
+    {% endif %}
+
+
+
+    <p>This page has been searched {{web.count_of_search}} times</p>
+    <p>First time has been searched by {{web.first_search_user}}</p>
+</body>

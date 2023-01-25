@@ -1,0 +1,38 @@
+{% include "links.html" %}
+  <head>
+    <title>Webpage list</title>
+  </head>
+
+{% with total=webs|length %}
+  <p>Total webpages: {{ total }}</p>
+{% endwith %}
+
+<table>
+  <tr>
+    <th>Button</th>
+    <th>Webpage</th>
+    <th>Status</th>
+    <th>Search times</th>
+    <th>URL</th>
+
+  </tr>
+  {% for web in webs %}
+    <tr>
+      <td><a href = {{web.name_webpage}} ><button>Click for details</button></a></td>
+      <td>{{ web.name_webpage }}</td>
+      <td>{{ web.status }}</td>
+      <td>{{ web.count_of_search }}</td>
+      <td>{{ web.url}}</td>
+      <td>{{ count.web }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+{% with total=webs|length %}
+  <p>Total webpages: {{ total }}</p>
+{% endwith %}
+
+<br><br>
+{% for web, count in count.items %}
+    <p>{{ web }}: {{ count }} users search</p>
+{% endfor %}

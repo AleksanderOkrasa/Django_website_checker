@@ -1,0 +1,16 @@
+{% include "links.html" %}
+  <head>
+    <title>My profile</title>
+  </head>
+<h1>My Profile</h1>
+
+<p>Username: {{ user.username }} </p>
+<p>Email: {{ user.email }} </p>
+<p>First name: {{ user.first_name }}</p>
+<p>Surname: {{ user.last_name }}</p>
+<p> Add date: {{ user.date_joined }} </p>
+
+
+<a href="/website/profile/edit"><button type="submit">Edit my profile</button></a>
+<a href="/website/profile/edit/password"><button type="submit">Edit my password</button></a>
+<a href="/website/profile/delete"><button type="submit">Delete my account</button></a>

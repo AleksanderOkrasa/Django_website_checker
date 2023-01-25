@@ -1,0 +1,9 @@
+{% include "user/profile.html" %}
+  <head>
+    <title>Delete user</title>
+  </head>
+<form method="post">
+    {% csrf_token %}
+    <p> You want delete your account, are you sure? </p>
+    <button type="submit">Yes, delete my account</button>
+</form>

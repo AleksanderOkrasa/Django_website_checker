@@ -1,0 +1,35 @@
+{% include "links.html" %}
+  <head>
+    <title>User list</title>
+  </head>
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Button</th>
+    <th>Email</th>
+    <th>Total count of search</th>
+  </tr>
+  {% for user in users %}
+
+    <tr>
+      <td>{{ user.username }}</td>
+      <td><a href = {{user.username}} ><button>Click for details</button></a></td>
+      <td>{{ user.email }}</td>
+      {% with user=user.username %}
+      <td>{{ count.user.username }}</td>
+      {% endwith %}
+    </tr>
+  {% endfor %}
+</table>
+
+{% with total=users|length %}
+  <p>Number of users: {{ total }}</p>
+{% endwith %}
+<br><br>
+
+<h3>User search website:</h3>
+{% for user, count in count.items %}
+    <p>{{ user }}: {{ count }}</p>
+{% endfor %}
+
+

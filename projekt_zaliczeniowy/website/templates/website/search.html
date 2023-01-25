@@ -1,0 +1,9 @@
+{% include "links.html" %}
+  <head>
+    <title>Search</title>
+  </head>
+<form action='/website/search/' method="post">
+    {% csrf_token %}
+    <input type="text" name="webpage">
+<input type="submit" value="Submit">
+</form>

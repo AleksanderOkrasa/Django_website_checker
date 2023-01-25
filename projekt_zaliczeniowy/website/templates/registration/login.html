@@ -1,0 +1,14 @@
+  <head>
+    <title>Log in</title>
+  </head>
+<a href="/website/users/"><button>Show all users</button></a>
+<a href="/website/webpages/"><button>Show all webpages</button></a>
+
+
+<p>Q2yd3uek</p>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Log in">
+</form>
+  Dont have account? <a href="/website/signup/"><button>Sign Up</button></a>

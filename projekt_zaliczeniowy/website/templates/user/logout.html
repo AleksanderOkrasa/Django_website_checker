@@ -1,0 +1,9 @@
+{% include "links.html" %}
+  <head>
+    <title>Logout</title>
+  </head>
+<form method="post">
+    {% csrf_token %}
+    <p> You want logout, are you sure?</p>
+    <button type="submit">Logout</button>
+</form>

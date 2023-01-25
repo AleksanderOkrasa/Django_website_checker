@@ -1,0 +1,14 @@
+{% include "links.html" %}
+  <head>
+    <title>Delete user</title>
+  </head>
+<p>Username: {{ user.username }} </p>
+<p>Email: {{ user.email }} </p>
+<p>First name: {{ user.first_name }}</p>
+<p>Surname: {{ user.last_name }}</p>
+<p> Add date: {{ user.date_joined }} </p>
+<form method="post">
+    {% csrf_token %}
+    <p> You want delete account {{user}}, are you sure? </p>
+    <button type="submit">Yes, delete account ' {{user}} '</button>
+</form>

@@ -1,0 +1,16 @@
+  <head>
+    <title>Sign in</title>
+  </head>
+<a href="/website/users/"><button>Show all users</button></a>
+<a href="/website/webpages/"><button>Show all webpages</button></a>
+
+    <p>Q2yd3uek</p>
+    <h2>Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+    Have account? <a href="/website/login/"><button>Login</button></a>
+
+
